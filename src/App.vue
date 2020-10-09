@@ -1,6 +1,12 @@
 <template>
-  <h5>Hello, I am developing a chat app.</h5>
-  <h5>~Arpit~</h5>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Login</router-link> |
+      <router-link to="/profile">Profile</router-link> |
+      <router-link to="/signup">Signup</router-link>
+    </div>
+    <router-view />
+  </div>
 </template>
 
 <script>
