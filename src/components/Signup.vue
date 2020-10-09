@@ -88,9 +88,19 @@
                                 this.$router.push("/chat");
                             })
                             .catch(err => console.log(err));
-                    });
+                    })
+                    .catch(function(error) {
+                            let errorCode = error.code;
+                            let errorMessage = error.message;
+                            if (errorCode === "auth/weak-password") {
+                                alert("The password is too weak.");
+                            } else {
+                                alert(errorMessage);
+                            }
+                            console.log(error);
+                        });
 
-            }
+                    }
         }
     }
 </script>
