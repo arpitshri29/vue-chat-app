@@ -104,30 +104,6 @@
 </script>
 
 <style scoped>
-    input[type="text"],
-    input[type="password"] {
-        display: inline-block;
-        box-sizing: border-box;
-        padding: 4px;
-        width: 220px;
-        height: 32px;
-        border: none;
-        border-bottom: 1px solid #AAA;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
-        font-size: 15px;
-        transition: 0.2s ease;
-        border-radius: 0;
-        outline: none;
-        box-shadow: none;
-    }
-    .detail-box {
-        padding: 5px;
-        width: 400px;
-        min-height: 250px;
-        margin: 0 auto;
-    }
-
     .btn-submit{
         margin-top: 28px;
         width: 120px;
