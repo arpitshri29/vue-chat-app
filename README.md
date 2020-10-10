@@ -2,7 +2,7 @@
 
 [Demo](https://vue-chat-arpit.netlify.app/) of the app.
 
-###Sign up and Log in to start a chat with a registered user.
+### Sign up and Log in to start a chat with a registered user.
 
 - A user can Sign up, Login, check their profile, upload or change their image, add description about themselves, chat with other users.
 
