@@ -35,6 +35,7 @@
                 </button>
             </div>
         </form>
+        <div class="myname">Arpit Shrivastava</div>
     </div>
 </template>
 
@@ -60,7 +61,6 @@
                 auth
                     .createUserWithEmailAndPassword(email, password)
                     .then(async res => {
-                        console.log('res: ',res);
                         await firebase.
                         firestore()
                             .collection('users')
@@ -73,7 +73,6 @@
                             description:"",
                             })
                             .then( ref => {
-                                console.log('ref: ', ref);
                                 localStorage.setItem('id', res.user.uid);
                                 localStorage.setItem("name", name);
                                 localStorage.setItem("email", email);
@@ -97,7 +96,6 @@
                             } else {
                                 alert(errorMessage);
                             }
-                            console.log(error);
                         });
 
                     }

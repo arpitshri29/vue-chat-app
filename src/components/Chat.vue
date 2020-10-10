@@ -2,7 +2,7 @@
     <div class="wrapper">
         <!-- Sidebar Start -->
         <nav style="color: white" id="sidebar">
-            <div class="sidebar-header d-flex justify-content-around">
+            <div class="sidebar-header d-flex justify-content-around align-items-center">
                 <div
                         class="d-flex pointer profile-dp"
                         v-on:click="onProfileClick"
@@ -10,15 +10,12 @@
                     <img
                             :src="photoURL"
                             alt="user"
-                            style="width:auto;
-                            height:50px;
-                            border-radius: 50%;
-                            background: white;"
+                            class="user-dp"
                     />
                 </div>
-                <button type="button" class="btn btn-primary" v-on:click="logout">Logout</button>
+                <button type="button" class="btn logout-btn" v-on:click="logout">Logout</button>
             </div>
-            <div style="height: 1px; border-bottom: 1px solid #00388b"></div>
+            <div style="height: 1px; border-bottom: 1px solid #586471"></div>
             <ul class="list-unstyled components">
                 <li
                         class="active mb-3"
@@ -33,19 +30,15 @@
                             <img
                                     :src="item.URL"
                                     alt="user"
-                                    width="50px"
-                                    height="50px"
-                                    style="width:auto;
-                                    height:50px;
-                                    border-radius: 50%;
-                                    background: white;"
+                                    style=""
+                                    class="peer-dp"
                             />
                         </div>
                         <div class="left-panel">
                             <h6 style="line-height: 2; font-weight: 600">{{item.name}}</h6>
                         </div>
                     </div>
-                    <div style="height: 1px; border-bottom: 1px solid #00388b"></div>
+                    <div style="height: 1px; border-bottom: 1px solid #586471"></div>
                 </li>
             </ul>
         </nav>
@@ -54,11 +47,11 @@
         <!-- Page Content Start -->
         <div id="content" v-if="currentPeerUser===null">
             <div class="my-4">
-                <img :src="photoURL" style="width:auto; height:150px;" class="br-50" />
+                <img :src="photoURL" class="br-50 main-dp" />
             </div>
             <div>
                 <h2>Welcome {{currentUserName}},</h2>
-                <h3>Let's start chat</h3>
+                <h3>Shall we begin</h3>
             </div>
         </div>
         <div v-else class="header-width">
@@ -106,7 +99,6 @@
                     .get();
 
                 if (result.docs.length > 0) {
-                    console.log("res: ", result.docs);
                     let listusers = [];
                     listusers = [...result.docs];
                     listusers.forEach((item, index) => {
@@ -148,10 +140,32 @@
         top: 0;
         right: 0;
     }
-
+    .logout-btn{
+        color: #101820;
+        background-color: #F2AA4C;
+        border-color: #F2AA4C;
+        font-weight: 600;
+        height: 40px;
+    }
     .profile-dp{
         margin-right: 25px;
-        width: 160px
+        width: 160px;
+        height: auto;
+    }
+    .user-dp{
+        width:50px;
+        max-height:55px;
+        border-radius: 50%;
+    }
+    .peer-dp{
+        width:50px;
+        max-height:55px;
+        border-radius: 50%;
+    }
+
+    .main-dp{
+        width:auto;
+        height:150px;
     }
     .active-user{
         cursor: pointer;

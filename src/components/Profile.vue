@@ -82,7 +82,6 @@
                         },
                         () => {
                             uploadPhoto.snapshot.ref.getDownloadURL().then(url => {
-                                console.log('url: ', url);
                                 this.updateUserInfo(true, url);
                             })
                         }
