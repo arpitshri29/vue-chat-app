@@ -6,6 +6,12 @@
 
 - A user can Sign up, Login, check their profile, upload or change their image, add description about themselves, chat with other users.
 
+### Screenshots of the app
+
+![alt text](https://github.com/arpitshri29/vue-chat-app/blob/master/screenshots/welcome-screen.png?raw=true)
+
+![alt text](https://github.com/arpitshri29/vue-chat-app/blob/master/screenshots/chat-box.png?raw=true)
+
 ## Project setup
 ```
 npm install
