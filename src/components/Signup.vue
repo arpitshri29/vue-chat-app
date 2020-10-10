@@ -21,12 +21,12 @@
                         class="form-control mb-4"
                         placeholder="Password"
                 />
-                <a href="/">
+                <router-link :to="{ path: '/'}">
                     <h6 class="mb-3"
                         style="color: #222;text-decoration: underline;">
                         Back to login
                     </h6>
-                </a>
+                </router-link>
                 <button
                         type="button"
                         v-on:click="signup"

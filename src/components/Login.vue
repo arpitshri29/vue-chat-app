@@ -17,12 +17,12 @@
                         placeholder="Password"
                         v-on:keyup.enter="login"
                 />
-                <a href="/signup">
+                <router-link :to="{ path: 'signup'}">
                     <h6 class="mb-3"
                         style="color: #222;text-decoration: underline;">
                         Create an account
                     </h6>
-                </a>
+                </router-link>
 
                 <button
                         type="button"
